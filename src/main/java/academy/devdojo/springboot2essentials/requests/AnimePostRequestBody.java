@@ -9,6 +9,4 @@ import javax.validation.constraints.NotEmpty;
 public class AnimePostRequestBody {
     @NotEmpty(message = "The name connot be empty")
     private String name;
-    @URL(message = "The URL is not valid")
-    private String url;
 }
