@@ -48,7 +48,6 @@ public class AnimeService {
     public void replace(AnimePutRequestBody animePutRequestBody) {
         findByIdOrThrowBadRequestException(animePutRequestBody.getId());
         Anime anime = AnimeMapper.INSTANCE.toAnime(animePutRequestBody);
-        System.err.println(anime);
         animeRepository.save(anime);
     }
 }

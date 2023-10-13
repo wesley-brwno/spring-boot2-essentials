@@ -119,7 +119,7 @@ class AnimeControllerTest {
     }
 
     @Test
-    @DisplayName("findByName returns an empty List of Anime when anime is not foud")
+    @DisplayName("findByName returns an empty List of Anime when anime is not found")
     void findByName_ReturnEmptyList_WhenAnimeIsNotFound() {
         BDDMockito.when(animeServiceMock.findByName(ArgumentMatchers.anyString()))
                 .thenReturn(Collections.emptyList());
@@ -139,7 +139,7 @@ class AnimeControllerTest {
 
     @Test
     @DisplayName("delete deletes Anime when successful")
-    void delete_DeletesAnime_WhenSuccesful() {
+    void delete_DeletesAnime_WhenSuccessful() {
         ResponseEntity<Void> entity = animeController.delete(1L);
 
         Assertions.assertThatCode(entity::getBody).doesNotThrowAnyException();
