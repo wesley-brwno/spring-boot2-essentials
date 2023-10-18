@@ -3,6 +3,8 @@ server:
     include-stacktrace: on_param
 
 spring:
+  application:
+    name:springboot2-essentials
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3307/anime?createDatabaseIfNotExist=true
@@ -20,8 +22,8 @@ management:
   endpoints:
     web:
       exposure:
-        include: "*"
-        exclude: "env,beans"
+        include: info, health, metrics, prometheus
+#        exclude: "env,beans"
   info:
     env:
       enabled: true
