@@ -4,7 +4,7 @@ server:
 
 spring:
   application:
-    name:springboot2-essentials
+    name: springboot2-essentials
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3307/anime?createDatabaseIfNotExist=true
